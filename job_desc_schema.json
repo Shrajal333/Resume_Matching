@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "properties": {
+    "original_jd": {
+      "type": "string",
+      "description": "The original job description provided by the user."
+    },
+    "variant_jds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "A job description variant using different wording but similar in essence."
+      },
+      "minItems": 4,
+      "maxItems": 4,
+      "description": "List of 4 alternative job descriptions."
+    }
+  },
+  "required": [
+    "original_jd",
+    "variant_jds"
+  ]
+}

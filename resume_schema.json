@@ -1,0 +1,134 @@
+{
+  "type": "object",
+  "properties": {
+    "candidate_name": {
+      "type": ["string", "null"],
+      "description": "Full name of the candidate"
+    },
+    "candidate_email": {
+      "type": ["string", "null"],
+      "description": "Primary email address"
+    },
+    "candidate_phone": {
+      "type": ["string", "null"],
+      "description": "Primary phone number"
+    },
+    "job_title": {
+        "type": ["string", "null"],
+        "description": "Job title the candidate is most suited for as inferred from their resume"
+    },
+    "years_of_experience": {
+      "type": ["string", "null"],
+      "description": "Total years of experience as of June 2025 (professional only, no internships or projects)"
+    },
+    "online_profiles": {
+      "type": "object",
+      "properties": {
+        "linkedin": {"type": ["string", "null"]},
+        "github": {"type": ["string", "null"]},
+        "portfolio": {"type": ["string", "null"]},
+        "others": {
+          "type": "array",
+          "items": {"type": ["string", "null"]},
+          "minItems": 0
+        }
+      },
+      "description": "Relevant online profiles"
+    },
+
+    "education": {
+      "type": "array",
+      "description": "Educational background of the candidate",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "properties": {
+          "degree": {"type": ["string", "null"]},
+          "institution": {"type": ["string", "null"]},
+          "location": {"type": ["string", "null"]},
+          "gpa": {"type": ["string", "null"]},
+          "start_date": {"type": ["string", "null"], "format": "date"},
+          "end_date": {"type": ["string", "null"], "format": "date"}
+        }
+      }
+    },
+
+    "experience": {
+      "type": "array",
+      "description": "Experience details (professional and internship)",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {"type": ["string", "null"]},
+          "organization": {"type": ["string", "null"]},
+          "location": {"type": ["string", "null"]},
+          "start_date": {"type": ["string", "null"], "format": "date"},
+          "end_date": {"type": ["string", "null"], "format": "date"},
+          "responsibilities": {
+            "type": "array",
+            "items": {"type": ["string", "null"]},
+            "minItems": 0
+          }
+        }
+      }
+    },
+
+    "projects": {
+      "type": "array",
+      "description": "List of projects with details",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {"type": ["string", "null"]},
+          "organization": {"type": ["string", "null"]},
+          "description": {"type": ["string", "null"]}
+        }
+      }
+    },
+
+    "certificates": {
+      "type": "array",
+      "items": {"type": ["string", "null"]},
+      "minItems": 0,
+      "description": "Certificates or credentials"
+    },
+
+    "awards": {
+      "type": "array",
+      "items": {"type": ["string", "null"]},
+      "minItems": 0,
+      "description": "Awards or recognitions received by the candidate"
+    },
+
+    "publications": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {"type": ["string", "null"]},
+          "conference": {"type": ["string", "null"]},
+          "status": {"type": ["string", "null"]}
+        }
+      },
+      "description": "Papers or book chapters"
+    },
+    
+    "skills": {
+      "type": "object",
+      "properties": {
+        "languages": {"type": "array", "items": {"type": ["string", "null"]}, "minItems": 0},
+        "frameworks": {"type": "array", "items": {"type": ["string", "null"]}, "minItems": 0},
+        "databases": {"type": "array", "items": {"type": ["string", "null"]}, "minItems": 0},
+        "tools": {"type": "array", "items": {"type": ["string", "null"]}, "minItems": 0},
+        "libraries": {"type": "array", "items": {"type": ["string", "null"]}, "minItems": 0},
+        "cloud_platforms": {"type": "array", "items": {"type": ["string", "null"]}, "minItems": 0},
+        "soft_skills": {"type": "array", "items": {"type": ["string", "null"]}, "minItems": 0},
+        "domain_expertise": {"type": "array", "items": {"type": ["string", "null"]}, "minItems": 0}
+      },
+      "description": "Categorized technical, soft and domain skills"
+    }
+  }
+}
