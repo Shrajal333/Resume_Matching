@@ -14,4 +14,6 @@ Resume Candidates is an extensible Python-based platform for automating the extr
 - **Analytics Ready:** Outputs parsed data for reporting and further analytics (Excel, JSON).
 - **Modular Architecture:** Separate modules for parsing, scoring, formatting, and more.
 
+---
+
 <img width="1800" height="1012" alt="Screenshot from 2025-07-15 12-02-52" src="https://github.com/user-attachments/assets/56cff722-3f26-43cd-ad3f-62022e0c53a1" />
